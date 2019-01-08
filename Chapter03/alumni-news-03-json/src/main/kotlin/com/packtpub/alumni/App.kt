@@ -36,7 +36,8 @@ fun main(args: Array<String>) {
                 call.respondText("Hello World!", ContentType.Text.Plain)
             }
             get("/hello") {
-                val respond = Hello(from = "Jasoet", to = "The World!")
+                val name = call.parameters["name"] ?: "Jasoet" 
+                val respond = Hello(from = name, to = "The World!")
                 call.respond(respond)
             }
         }
