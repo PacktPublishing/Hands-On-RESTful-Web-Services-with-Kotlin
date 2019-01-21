@@ -1,0 +1,11 @@
+PUT	/product/1 HTTP/1.1
+Content-Type: application/json
+Content-Length: 50
+Host: api.myapplication.com
+
+BODY
+
+{
+	"product_id": 1,
+	"product_name": "MacBook"
+}

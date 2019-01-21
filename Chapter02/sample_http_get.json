@@ -1,0 +1,22 @@
+GET		/order/3 HTTP/1.1
+Accept:	text/html; charset=UTF-8
+Accept-Encoding: gzip
+Accept-Language: en-US
+Connection: keep-alive
+Host: api.myapplication.com
+
+{
+	"user_id": 123
+}
+
+Content-Type: text/html; charset=UTF-8
+Date: Sat, 01 Jan 2019 00:00:00 GMT
+Server: Apache
+
+{
+  "data": {
+    "id": 3,
+    "product_name": "MacBook",
+    "price": 30000000
+  }
+}

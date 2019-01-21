@@ -1,0 +1,11 @@
+PATCH /order/5 HTTP/1.1
+Content-Type: application/json
+Content-Length: 45
+Host: api.myapplication.com
+
+BODY
+
+{
+	"replace": "product_name",
+	"value": "iPhone"
+}
