@@ -26,5 +26,5 @@ dependencies {
 }
 
 application {
-    mainClassName = "com.packtpub.alumni.AppKt"
+    mainClassName = "io.ktor.server.netty.EngineMain"
 }
