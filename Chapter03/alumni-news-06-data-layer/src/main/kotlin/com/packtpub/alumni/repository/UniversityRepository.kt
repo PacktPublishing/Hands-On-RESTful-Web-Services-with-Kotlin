@@ -29,5 +29,9 @@ class UniversityRepository {
     fun existsById(id: String): Boolean {
         return storage.any { it.id == id }
     }
+    
+    fun deleteById(id: String): Boolean {
+       return storage.removeIf { it.id == id }
+    }
 
 }
