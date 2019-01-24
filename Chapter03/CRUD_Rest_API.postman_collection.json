@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "3febd327-e079-4a92-992c-7b8a0559984f",
+		"name": "Ktor CRUD Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Hello World Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Save a City",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"JOG\",\n\t\"countryCode\": \"ID\",\n\t\"name\": \"Yogyakarta\",\n\t\"areaCode\": 55000\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/city/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Save another City",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"CGK\",\n\t\"countryCode\": \"ID\",\n\t\"name\": \"Jakarta\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/city/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Get All Cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/city/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Get City by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/city/CGK",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						"CGK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Update a City",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"CGK\",\n\t\"countryCode\": \"ID\",\n\t\"name\": \"Jakarta\",\n\t\"areaCode\": 70000\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/city/CGK",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						"CGK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Get All Cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/city/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Update a City",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"CGK\",\n\t\"countryCode\": \"ID\",\n\t\"name\": \"Jakarta\",\n\t\"areaCode\": 70000\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/city/CGK",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						"CGK"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. Get All Cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/city/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
