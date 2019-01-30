@@ -5,7 +5,4 @@ Host: api.myapplication.com
 
 BODY
 
-{
-	"replace": "product_name",
-	"value": "iPhone"
-}
+{ "replace": "product_name", "value": "iPhone" }

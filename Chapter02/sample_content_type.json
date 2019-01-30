@@ -1,10 +1,7 @@
 POST /purchase HTTP/1.1
 Content-Type: application/json
 
-{
-  "order_id": 123,
-  "product_name": "Computer"
-}
+{ "order_id": 123, "product_name": "Computer" }
 
 HTTP/1.1 201 OK
 Location: https://api.myapplication.com/purchase/123
