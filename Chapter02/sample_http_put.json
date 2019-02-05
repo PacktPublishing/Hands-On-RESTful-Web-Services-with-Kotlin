@@ -5,7 +5,4 @@ Host: api.myapplication.com
 
 BODY
 
-{
-	"product_id": 1,
-	"product_name": "MacBook"
-}
+{ "product_id": 1, "product_name": "MacBook" }

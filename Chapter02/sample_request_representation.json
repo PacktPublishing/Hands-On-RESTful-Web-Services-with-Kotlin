@@ -2,7 +2,4 @@ POST /order/5 HTTP/1.1
 Host: api.myapplication.com
 Content-Type: application/json
 
-{
-	"user_id": 123,
-	"is_special_price": false
-}
+{ "user_id": 123, "is_special_price": false }

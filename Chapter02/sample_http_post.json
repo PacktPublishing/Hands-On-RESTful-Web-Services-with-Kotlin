@@ -3,9 +3,7 @@ Content-Type: application/json
 Content-Length: 20
 Host: api.myapplication.com
 
-{
-	"order_id": 5
-}
+{ "order_id": 5 }
 
 Content-Type: application/json
 Location: purchase/5
