@@ -1,0 +1,5 @@
+entity-packages: com.packtpub.alumni.model
+transactional-packages: com.packtpub.alumni
+querybean-packages: com.packtpub.alumni
+transient-internal-fields: true
+
