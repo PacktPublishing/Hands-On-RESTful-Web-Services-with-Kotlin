@@ -2,7 +2,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val ktorVersion: String = "1.1.3"
 val logbackVersion: String = "1.2.1"
-val koinVersion: String = "2.0.0-beta-3"
 
 plugins {
     id("com.github.johnrengelman.shadow").version("4.0.3")
@@ -23,16 +22,10 @@ dependencies {
     implementation("io.ktor:ktor-server-core:$ktorVersion")
     implementation("io.ktor:ktor-gson:$ktorVersion")
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
-    implementation("org.koin:koin-core:$koinVersion")
-    implementation("org.koin:koin-ktor:$koinVersion")
-    implementation("org.koin:koin-logger-slf4j:$koinVersion")
-
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
     testImplementation("io.ktor:ktor-server-tests:$ktorVersion")
-    testImplementation("org.koin:koin-test:$koinVersion")
-
 }
 
 val ktorEngineName: String = "io.ktor.server.netty.EngineMain"
