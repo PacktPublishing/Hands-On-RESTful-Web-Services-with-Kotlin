@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val ktorVersion: String = "1.1.3"
 val logbackVersion: String = "1.2.1"
-val koinVersion: String = "2.0.0-beta-3"
+val koinVersion: String = "2.0.0-rc-1"
 
 val hikariCpVersion: String = "3.3.1"
 val h2DatabaseVersion: String = "1.4.199"
