@@ -6,24 +6,25 @@ import com.zaxxer.hikari.HikariDataSource
 import io.ktor.config.ApplicationConfig
 import io.ktor.config.HoconApplicationConfig
 import io.ktor.util.KtorExperimentalAPI
+import org.koin.core.module.Module
 import org.koin.dsl.module
 import javax.sql.DataSource
 
 @KtorExperimentalAPI
-val dataSourceModule = module {
+val dataSourceModule: Module = module {
 
-    single {
-        HoconApplicationConfig(ConfigFactory.load()) as ApplicationConfig
+    single<ApplicationConfig> {
+        HoconApplicationConfig(ConfigFactory.load())
     }
 
-    single {
+    single<DataSource> {
         buildDataSource(get())
     }
 
 }
 
 @KtorExperimentalAPI
-private fun buildDataSource(config: ApplicationConfig): DataSource {
+private fun buildDataSource(config: ApplicationConfig): HikariDataSource {
     val hikariConfig = HikariConfig()
     hikariConfig.poolName = config.propertyOrNull("dataSource.poolName")?.getString()
     hikariConfig.jdbcUrl = config.propertyOrNull("dataSource.url")?.getString()
