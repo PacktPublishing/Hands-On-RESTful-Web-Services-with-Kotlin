@@ -11,8 +11,8 @@ import io.ktor.routing.get
 import io.ktor.routing.routing
 import io.ktor.util.KtorExperimentalAPI
 import org.koin.Logger.slf4jLogger
+import org.koin.ktor.ext.Koin
 import org.koin.ktor.ext.get
-import org.koin.ktor.ext.installKoin
 import javax.sql.DataSource
 
 @KtorExperimentalAPI
@@ -22,7 +22,7 @@ fun Application.alumniModule() {
         }
     }
 
-    installKoin {
+    install(Koin) {
         slf4jLogger()
 
         modules(dataSourceModule)
