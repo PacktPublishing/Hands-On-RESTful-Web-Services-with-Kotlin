@@ -1,5 +1,6 @@
 package com.packtpub.alumni.model
 
+import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
 import javax.persistence.ManyToOne
@@ -10,6 +11,7 @@ import javax.persistence.Table
 data class City(
         @Id
         var id: String,
+        @Column(name = "country_code", length = 3)
         var countryCode: String,
         var name: String,
         var areaCode: Int?
