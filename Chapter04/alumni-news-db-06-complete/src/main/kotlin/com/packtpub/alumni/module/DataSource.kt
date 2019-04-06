@@ -15,11 +15,11 @@ import javax.sql.DataSource
 @KtorExperimentalAPI
 val dataSourceModule = module {
 
-    single {
-        HoconApplicationConfig(ConfigFactory.load()) as ApplicationConfig
+    single<ApplicationConfig> {
+        HoconApplicationConfig(ConfigFactory.load())
     }
 
-    single {
+    single<DataSource> {
         buildDataSource(get())
     }
 
@@ -29,7 +29,7 @@ val dataSourceModule = module {
 }
 
 @KtorExperimentalAPI
-private fun buildDataSource(config: ApplicationConfig): DataSource {
+private fun buildDataSource(config: ApplicationConfig): HikariDataSource {
     val hikariConfig = HikariConfig()
     hikariConfig.poolName = config.propertyOrNull("dataSource.poolName")?.getString()
     hikariConfig.jdbcUrl = config.propertyOrNull("dataSource.url")?.getString()
