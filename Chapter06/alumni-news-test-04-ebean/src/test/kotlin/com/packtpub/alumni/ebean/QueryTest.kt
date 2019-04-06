@@ -14,7 +14,7 @@ import org.koin.dsl.koinApplication
 
 @KtorExperimentalAPI
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class EbeanTest {
+class QueryTest {
 
     @Nested
     inner class DatabaseTest {
